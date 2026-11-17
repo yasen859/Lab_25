@@ -12,7 +12,7 @@ double rand_double(double dmin, double dmax) {
 }
 
 int* rand10_arr(int n, int mmax) {
-	int* arr = (int*)malloc(n * sizeof(int));
+	int* arr = (int*)(n * sizeof(int));
 	for (int i = 0; i < n; i++) {
 		arr[i] = rand10(mmax);
 	}
@@ -20,7 +20,7 @@ int* rand10_arr(int n, int mmax) {
 }
 
 double* rand_double_arr(int n, double dm) {
-	double* arr = (double*)malloc(n * sizeof(double));
+	double* arr = (double*)(n * sizeof(double));
 	for (int i = 0; i < n; i++) {
 		arr[i] = rand_double(-dm, dm);
 	}
